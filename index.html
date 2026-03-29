@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HR Web Solutions | Premium Web Design, SEO & Digital Marketing Agency</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="HR Web Solutions is a premium freelance web design agency offering SEO services, digital marketing, graphic design, and content creation. Book a free strategy call today." />
+  <meta name="keywords" content="Web Design Agency, SEO Services, Digital Marketing, Graphic Design, Social Media Marketing, Content Creation, Video Editing" />
+  <meta name="author" content="HR Web Solutions" />
+  <meta property="og:title" content="HR Web Solutions | Web Design & Digital Marketing Agency" />
+  <meta property="og:description" content="High-converting websites, SEO, and digital marketing solutions for modern brands." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#0a0f2c', 800: '#0d1438', 700: '#111a4a', 600: '#162060' },
+            cyan: { DEFAULT: '#00f5ff', 400: '#3dfcff', 300: '#7fffff', dim: '#00c8d4' },
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            body: ['DM Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-navy text-white font-body overflow-x-hidden">
+
+<!-- ===================== NAVBAR ===================== -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-5 px-6 md:px-12 flex items-center justify-between">
+  <!-- SVG Logo -->
+  <a href="#" class="flex items-center gap-3 group">
+    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="44" height="44" rx="10" fill="#0a0f2c" stroke="#00f5ff" stroke-width="1.5"/>
+      <path d="M10 12h6v8h8v-8h6v20h-6v-8h-8v8h-6V12z" fill="#00f5ff"/>
+      <path d="M30 22 Q38 12 34 32" stroke="#00f5ff" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="34" cy="32" r="2" fill="#00f5ff"/>
+    </svg>
+    <span class="font-display font-800 text-xl tracking-tight text-white group-hover:text-cyan transition-colors">HR <span class="text-cyan">Web</span> Solutions</span>
+  </a>
+
+  <!-- Desktop Nav -->
+  <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
+    <li><a href="#services" class="hover:text-cyan transition-colors">Services</a></li>
+    <li><a href="#portfolio" class="hover:text-cyan transition-colors">Portfolio</a></li>
+    <li><a href="#testimonials" class="hover:text-cyan transition-colors">Results</a></li>
+    <li><a href="#contact" class="hover:text-cyan transition-colors">Contact</a></li>
+    <li><a href="#strategy-call" class="px-5 py-2.5 bg-cyan text-navy font-display font-700 text-sm rounded-lg hover:bg-cyan/80 transition-all hover:shadow-[0_0_20px_rgba(0,245,255,0.4)]">Free Strategy Call</a></li>
+  </ul>
+
+  <!-- Mobile Hamburger -->
+  <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+    <span class="block w-6 h-0.5 bg-cyan transition-all duration-300"></span>
+    <span class="block w-6 h-0.5 bg-cyan transition-all duration-300"></span>
+    <span class="block w-4 h-0.5 bg-cyan transition-all duration-300"></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-navy/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 text-2xl font-display font-700 translate-x-full transition-transform duration-500">
+  <a href="#services" class="mobile-link hover:text-cyan transition-colors">Services</a>
+  <a href="#portfolio" class="mobile-link hover:text-cyan transition-colors">Portfolio</a>
+  <a href="#testimonials" class="mobile-link hover:text-cyan transition-colors">Results</a>
+  <a href="#contact" class="mobile-link hover:text-cyan transition-colors">Contact</a>
+  <a href="#strategy-call" class="mobile-link px-8 py-3 bg-cyan text-navy rounded-xl">Free Strategy Call</a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- BG Image -->
+  <div class="absolute inset-0 z-0">
+    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1800&q=80" alt="Digital Strategy Background" class="w-full h-full object-cover opacity-20" loading="eager" />
+    <div class="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/60 to-navy"></div>
+  </div>
+
+  <!-- Grid Overlay -->
+  <div class="absolute inset-0 z-0 hero-grid-overlay opacity-10"></div>
+
+  <!-- Glow Orbs -->
+  <div class="absolute top-1/4 left-1/4 w-80 h-80 bg-cyan/10 rounded-full blur-3xl animate-pulse-slow z-0"></div>
+  <div class="absolute bottom-1/3 right-1/4 w-96 h-96 bg-cyan/5 rounded-full blur-3xl animate-pulse-slow2 z-0"></div>
+
+  <div class="relative z-10 text-center px-6 max-w-5xl mx-auto pt-24">
+    <!-- Eyebrow -->
+    <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full border border-cyan/30 bg-cyan/5 backdrop-blur-sm" data-aos="fade-down" data-aos-delay="100">
+      <span class="w-2 h-2 bg-cyan rounded-full animate-pulse"></span>
+      <span class="text-cyan text-sm font-display font-600 tracking-widest uppercase">Premium Digital Agency</span>
+    </div>
+
+    <h1 class="font-display font-800 text-5xl sm:text-6xl lg:text-8xl leading-none tracking-tight mb-6" data-aos="fade-up" data-aos-delay="200">
+      We Build Websites<br/>
+      <span class="text-gradient-cyan">That Convert.</span>
+    </h1>
+
+    <p class="text-white/60 text-lg sm:text-xl max-w-2xl mx-auto mb-10 font-300 leading-relaxed" data-aos="fade-up" data-aos-delay="350">
+      HR Web Solutions partners with ambitious brands to craft high-performance digital experiences — from stunning web design to full-stack digital marketing.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14" data-aos="fade-up" data-aos-delay="450">
+      <a href="#strategy-call" class="w-full sm:w-auto px-8 py-4 bg-cyan text-navy font-display font-700 text-lg rounded-xl hover:shadow-[0_0_40px_rgba(0,245,255,0.5)] transition-all duration-300 hover:-translate-y-1 cta-pulse">
+        🚀 Book Free Strategy Call
+      </a>
+      <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 border border-white/20 bg-white/5 backdrop-blur-sm text-white font-display font-600 text-lg rounded-xl hover:border-cyan/50 hover:bg-white/10 transition-all duration-300">
+        View Our Work →
+      </a>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="glassmorphic-card grid grid-cols-3 gap-6 max-w-2xl mx-auto px-6 py-5 rounded-2xl" data-aos="fade-up" data-aos-delay="550">
+      <div class="text-center">
+        <p class="font-display font-800 text-3xl text-cyan counter" data-target="120">0</p>
+        <p class="text-white/50 text-xs mt-1">Projects Delivered</p>
+      </div>
+      <div class="text-center border-x border-white/10">
+        <p class="font-display font-800 text-3xl text-cyan counter" data-target="98">0</p>
+        <p class="text-white/50 text-xs mt-1">% Client Satisfaction</p>
+      </div>
+      <div class="text-center">
+        <p class="font-display font-800 text-3xl text-cyan counter" data-target="5">0</p>
+        <p class="text-white/50 text-xs mt-1">Years Experience</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Hint -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30 text-xs">
+    <span>Scroll</span>
+    <div class="w-px h-10 bg-gradient-to-b from-white/30 to-transparent animate-bounce-slow"></div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES SLIDER ===================== -->
+<section id="services" class="py-20 overflow-hidden relative">
+  <div class="absolute inset-0 bg-gradient-to-b from-navy via-navy-800 to-navy"></div>
+
+  <div class="relative z-10 text-center mb-12 px-6" data-aos="fade-up">
+    <p class="text-cyan text-sm font-display font-600 tracking-widest uppercase mb-3">What We Do</p>
+    <h2 class="font-display font-800 text-4xl sm:text-5xl">Our Services</h2>
+    <p class="text-white/50 mt-4 max-w-xl mx-auto">Everything your brand needs to dominate online — under one roof.</p>
+  </div>
+
+  <!-- Slider Track 1 (left) -->
+  <div class="slider-wrapper mb-4">
+    <div class="slider-track" id="slider-track-1">
+      <!-- Cards injected by JS -->
+    </div>
+  </div>
+  <!-- Slider Track 2 (right, reverse) -->
+  <div class="slider-wrapper">
+    <div class="slider-track slider-track-reverse" id="slider-track-2">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST SIGNALS ===================== -->
+<section class="py-12 px-6 text-center" data-aos="fade-up">
+  <p class="text-white/30 text-sm uppercase tracking-widest font-display mb-8">Trusted By Brands Across Industries</p>
+  <div class="flex flex-wrap justify-center gap-8 items-center opacity-40">
+    <!-- Brand placeholder text logos -->
+    <span class="font-display font-700 text-2xl text-white">Nexara</span>
+    <span class="font-display font-700 text-2xl text-white">Velofy</span>
+    <span class="font-display font-700 text-2xl text-white">Koda Labs</span>
+    <span class="font-display font-700 text-2xl text-white">Strive Co.</span>
+    <span class="font-display font-700 text-2xl text-white">BrightPath</span>
+  </div>
+</section>
+
+<!-- ===================== STRATEGY CALL FORM ===================== -->
+<section id="strategy-call" class="py-24 px-6 relative overflow-hidden">
+  <!-- Glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan/5 rounded-full blur-3xl"></div>
+
+  <div class="relative z-10 max-w-2xl mx-auto">
+    <div data-aos="fade-up" class="text-center mb-12">
+      <span class="inline-block px-4 py-1.5 bg-cyan/10 border border-cyan/20 text-cyan text-xs font-display tracking-widest uppercase rounded-full mb-4">Limited Spots Available</span>
+      <h2 class="font-display font-800 text-4xl sm:text-5xl mb-4">Book a Free<br/><span class="text-cyan">Strategy Call</span></h2>
+      <p class="text-white/50 text-lg">Get a free 30-minute audit of your current online presence. No fluff, no hard sell — just actionable insights.</p>
+    </div>
+
+    <form id="strategy-form" class="glassmorphic-card p-8 rounded-2xl space-y-5" data-aos="fade-up" data-aos-delay="150" novalidate>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+          <label class="form-label">Full Name *</label>
+          <input type="text" id="f-name" placeholder="John Carter" class="form-input" />
+          <p class="form-error" id="err-name"></p>
+        </div>
+        <div>
+          <label class="form-label">Email Address *</label>
+          <input type="email" id="f-email" placeholder="john@brand.com" class="form-input" />
+          <p class="form-error" id="err-email"></p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+          <label class="form-label">Phone Number</label>
+          <input type="tel" id="f-phone" placeholder="+1 555 000 0000" class="form-input" />
+        </div>
+        <div>
+          <label class="form-label">Business Name *</label>
+          <input type="text" id="f-biz" placeholder="Your Company" class="form-input" />
+          <p class="form-error" id="err-biz"></p>
+        </div>
+      </div>
+      <div>
+        <label class="form-label">Service You Need *</label>
+        <select id="f-service" class="form-input">
+          <option value="">— Select a service —</option>
+          <option>Website Design</option>
+          <option>SEO Services</option>
+          <option>Social Media Marketing</option>
+          <option>Graphic Design</option>
+          <option>Article Writing</option>
+          <option>Video Editing</option>
+          <option>Content Creation</option>
+          <option>Full Digital Package</option>
+        </select>
+        <p class="form-error" id="err-service"></p>
+      </div>
+      <div>
+        <label class="form-label">Tell Us About Your Goals</label>
+        <textarea id="f-msg" rows="3" placeholder="What's your biggest digital challenge right now?" class="form-input resize-none"></textarea>
+      </div>
+
+      <button type="submit" id="form-submit-btn" class="w-full py-4 bg-cyan text-navy font-display font-700 text-lg rounded-xl hover:shadow-[0_0_30px_rgba(0,245,255,0.4)] transition-all duration-300 hover:-translate-y-0.5">
+        Book My Free Call →
+      </button>
+
+      <!-- Success Message -->
+      <div id="form-success" class="hidden text-center py-4 text-cyan font-display font-600 text-lg">
+        ✅ Request received! We'll be in touch within 24 hours.
+      </div>
+
+      <p class="text-center text-white/30 text-xs">🔒 Your data is 100% secure. No spam, ever.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== PORTFOLIO ===================== -->
+<section id="portfolio" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <p class="text-cyan text-sm font-display font-600 tracking-widest uppercase mb-3">Our Work</p>
+      <h2 class="font-display font-800 text-4xl sm:text-5xl">Portfolio Highlights</h2>
+      <p class="text-white/50 mt-4 max-w-xl mx-auto">Real projects, real results. Every pixel crafted with purpose.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Portfolio Card 1 -->
+      <div class="portfolio-card group" data-aos="fade-up" data-aos-delay="0">
+        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80" alt="Web Design Project" class="w-full h-56 object-cover rounded-xl" loading="lazy" />
+        <div class="portfolio-overlay">
+          <span class="tag">Web Design</span>
+          <h3 class="font-display font-700 text-xl mt-2">E-Commerce Revamp</h3>
+          <p class="text-white/60 text-sm mt-1">+220% increase in conversions</p>
+          <a href="#strategy-call" class="mt-4 inline-flex items-center gap-2 text-cyan text-sm font-600 hover:gap-3 transition-all">View Case Study →</a>
+        </div>
+      </div>
+
+      <!-- Portfolio Card 2 -->
+      <div class="portfolio-card group" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2e28b?w=600&q=80" alt="SEO Campaign" class="w-full h-56 object-cover rounded-xl" loading="lazy" />
+        <div class="portfolio-overlay">
+          <span class="tag">SEO</span>
+          <h3 class="font-display font-700 text-xl mt-2">SaaS SEO Campaign</h3>
+          <p class="text-white/60 text-sm mt-1">#1 ranking in 6 weeks</p>
+          <a href="#strategy-call" class="mt-4 inline-flex items-center gap-2 text-cyan text-sm font-600 hover:gap-3 transition-all">View Case Study →</a>
+        </div>
+      </div>
+
+      <!-- Portfolio Card 3 -->
+      <div class="portfolio-card group" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80" alt="Social Media" class="w-full h-56 object-cover rounded-xl" loading="lazy" />
+        <div class="portfolio-overlay">
+          <span class="tag">Social Media</span>
+          <h3 class="font-display font-700 text-xl mt-2">Brand Launch Campaign</h3>
+          <p class="text-white/60 text-sm mt-1">40K followers in 90 days</p>
+          <a href="#strategy-call" class="mt-4 inline-flex items-center gap-2 text-cyan text-sm font-600 hover:gap-3 transition-all">View Case Study →</a>
+        </div>
+      </div>
+
+      <!-- Portfolio Card 4 -->
+      <div class="portfolio-card group" data-aos="fade-up" data-aos-delay="0">
+        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80" alt="Graphic Design" class="w-full h-56 object-cover rounded-xl" loading="lazy" />
+        <div class="portfolio-overlay">
+          <span class="tag">Graphic Design</span>
+          <h3 class="font-display font-700 text-xl mt-2">Brand Identity System</h3>
+          <p class="text-white/60 text-sm mt-1">Full visual rebrand delivered in 2 weeks</p>
+          <a href="#strategy-call" class="mt-4 inline-flex items-center gap-2 text-cyan text-sm font-600 hover:gap-3 transition-all">View Case Study →</a>
+        </div>
+      </div>
+
+      <!-- Portfolio Card 5 -->
+      <div class="portfolio-card group" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1504465039710-0f49c0a47eb7?w=600&q=80" alt="Content Creation" class="w-full h-56 object-cover rounded-xl" loading="lazy" />
+        <div class="portfolio-overlay">
+          <span class="tag">Content</span>
+          <h3 class="font-display font-700 text-xl mt-2">Blog Content Strategy</h3>
+          <p class="text-white/60 text-sm mt-1">300% growth in organic traffic</p>
+          <a href="#strategy-call" class="mt-4 inline-flex items-center gap-2 text-cyan text-sm font-600 hover:gap-3 transition-all">View Case Study →</a>
+        </div>
+      </div>
+
+      <!-- Portfolio Card 6 -->
+      <div class="portfolio-card group" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&q=80" alt="Video Editing" class="w-full h-56 object-cover rounded-xl" loading="lazy" />
+        <div class="portfolio-overlay">
+          <span class="tag">Video Editing</span>
+          <h3 class="font-display font-700 text-xl mt-2">Product Launch Video</h3>
+          <p class="text-white/60 text-sm mt-1">2M+ views organically</p>
+          <a href="#strategy-call" class="mt-4 inline-flex items-center gap-2 text-cyan text-sm font-600 hover:gap-3 transition-all">View Case Study →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12" data-aos="fade-up">
+      <a href="#strategy-call" class="inline-block px-8 py-4 border border-cyan/40 text-cyan font-display font-600 rounded-xl hover:bg-cyan/10 transition-all">See All Projects →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section id="testimonials" class="py-24 px-6 bg-navy-800 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-navy to-navy-800"></div>
+
+  <div class="relative z-10 max-w-5xl mx-auto">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <p class="text-cyan text-sm font-display font-600 tracking-widest uppercase mb-3">Social Proof</p>
+      <h2 class="font-display font-800 text-4xl sm:text-5xl">Clients Love Us</h2>
+    </div>
+
+    <!-- Testimonial Slider -->
+    <div class="relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+      <div id="testimonial-slider" class="flex transition-transform duration-700 ease-in-out">
+
+        <div class="testimonial-slide">
+          <div class="glassmorphic-card p-8 rounded-2xl max-w-2xl mx-auto text-center">
+            <div class="flex justify-center mb-4">
+              <div class="stars">★★★★★</div>
+            </div>
+            <p class="text-white/80 text-lg italic leading-relaxed mb-6">"HR Web Solutions completely transformed our online presence. Our website now generates 3x more leads than before, and the SEO results are insane. Couldn't recommend them enough."</p>
+            <div class="flex items-center justify-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan/40 to-navy-600 flex items-center justify-center font-display font-700 text-cyan text-lg">S</div>
+              <div class="text-left">
+                <p class="font-display font-700">Sarah Mitchell</p>
+                <p class="text-white/40 text-sm">CEO, BrightPath Agency</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <div class="glassmorphic-card p-8 rounded-2xl max-w-2xl mx-auto text-center">
+            <div class="flex justify-center mb-4">
+              <div class="stars">★★★★★</div>
+            </div>
+            <p class="text-white/80 text-lg italic leading-relaxed mb-6">"Their content strategy brought us to page one of Google in under 2 months. The team is incredibly responsive, creative, and genuinely invested in your growth."</p>
+            <div class="flex items-center justify-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan/40 to-navy-600 flex items-center justify-center font-display font-700 text-cyan text-lg">R</div>
+              <div class="text-left">
+                <p class="font-display font-700">Rajan Mehta</p>
+                <p class="text-white/40 text-sm">Founder, Velofy SaaS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <div class="glassmorphic-card p-8 rounded-2xl max-w-2xl mx-auto text-center">
+            <div class="flex justify-center mb-4">
+              <div class="stars">★★★★★</div>
+            </div>
+            <p class="text-white/80 text-lg italic leading-relaxed mb-6">"The video and graphic design work was phenomenal. They nailed our brand voice immediately and delivered ahead of schedule. My Instagram engagement went through the roof."</p>
+            <div class="flex items-center justify-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan/40 to-navy-600 flex items-center justify-center font-display font-700 text-cyan text-lg">A</div>
+              <div class="text-left">
+                <p class="font-display font-700">Aisha Kowalski</p>
+                <p class="text-white/40 text-sm">Brand Director, Koda Labs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dots -->
+      <div class="flex justify-center gap-2 mt-8" id="testimonial-dots">
+        <button class="dot active" data-index="0"></button>
+        <button class="dot" data-index="1"></button>
+        <button class="dot" data-index="2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA BANNER ===================== -->
+<section class="py-16 px-6" data-aos="zoom-in">
+  <div class="max-w-4xl mx-auto glassmorphic-card p-10 rounded-3xl text-center border border-cyan/20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-cyan/5 via-transparent to-cyan/5 rounded-3xl"></div>
+    <div class="relative z-10">
+      <h2 class="font-display font-800 text-3xl sm:text-4xl mb-4">Ready to <span class="text-cyan">10x Your Growth?</span></h2>
+      <p class="text-white/50 max-w-lg mx-auto mb-8">Join 120+ brands who trust HR Web Solutions to drive real, measurable results.</p>
+      <a href="#strategy-call" class="inline-block px-10 py-4 bg-cyan text-navy font-display font-700 text-lg rounded-xl hover:shadow-[0_0_40px_rgba(0,245,255,0.5)] transition-all duration-300 hover:-translate-y-1 cta-pulse">
+        Start Your Free Audit →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="contact" class="pt-16 pb-8 px-6 border-t border-white/10">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <!-- Brand -->
+      <div class="md:col-span-1">
+        <a href="#" class="flex items-center gap-2 mb-4">
+          <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="44" height="44" rx="10" fill="#0a0f2c" stroke="#00f5ff" stroke-width="1.5"/>
+            <path d="M10 12h6v8h8v-8h6v20h-6v-8h-8v8h-6V12z" fill="#00f5ff"/>
+            <path d="M30 22 Q38 12 34 32" stroke="#00f5ff" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <circle cx="34" cy="32" r="2" fill="#00f5ff"/>
+          </svg>
+          <span class="font-display font-700 text-lg">HR <span class="text-cyan">Web</span> Solutions</span>
+        </a>
+        <p class="text-white/40 text-sm leading-relaxed">A premium digital agency built for growth-focused brands.</p>
+        <!-- Social Icons -->
+        <div class="flex gap-3 mt-5">
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter/X">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="font-display font-700 text-sm uppercase tracking-widest text-white/70 mb-4">Services</h3>
+        <ul class="space-y-2 text-sm text-white/40">
+          <li><a href="#strategy-call" class="hover:text-cyan transition-colors">Website Design</a></li>
+          <li><a href="#strategy-call" class="hover:text-cyan transition-colors">SEO Services</a></li>
+          <li><a href="#strategy-call" class="hover:text-cyan transition-colors">Social Media Marketing</a></li>
+          <li><a href="#strategy-call" class="hover:text-cyan transition-colors">Graphic Design</a></li>
+          <li><a href="#strategy-call" class="hover:text-cyan transition-colors">Content Creation</a></li>
+          <li><a href="#strategy-call" class="hover:text-cyan transition-colors">Video Editing</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="font-display font-700 text-sm uppercase tracking-widest text-white/70 mb-4">Company</h3>
+        <ul class="space-y-2 text-sm text-white/40">
+          <li><a href="#" class="hover:text-cyan transition-colors">Our Story</a></li>
+          <li><a href="#portfolio" class="hover:text-cyan transition-colors">Portfolio</a></li>
+          <li><a href="#testimonials" class="hover:text-cyan transition-colors">Testimonials</a></li>
+          <li><a href="#" class="hover:text-cyan transition-colors">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-cyan transition-colors">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="font-display font-700 text-sm uppercase tracking-widest text-white/70 mb-4">Contact</h3>
+        <ul class="space-y-3 text-sm text-white/40">
+          <li class="flex items-start gap-2">
+            <span class="text-cyan mt-0.5">✉</span>
+            <a href="mailto:hello@hrwebsolutions.com" class="hover:text-cyan transition-colors">hello@hrwebsolutions.com</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-cyan mt-0.5">📞</span>
+            <a href="tel:+11234567890" class="hover:text-cyan transition-colors">+1 (123) 456-7890</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-cyan mt-0.5">📍</span>
+            <span>Remote-First Agency — Global</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/30 text-xs">
+      <p>© 2025 HR Web Solutions. All rights reserved.</p>
+      <p>Crafted with precision by <span class="text-cyan">HR Web Solutions</span></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== FLOATING CHATBOT ===================== -->
+<div id="chatbot-wrapper" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+  <!-- Chat Window -->
+  <div id="chat-window" class="chat-window hidden">
+    <div class="chat-header">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 bg-cyan rounded-full animate-pulse"></span>
+        <span class="font-display font-700 text-sm">HR Web Solutions</span>
+      </div>
+      <button id="chat-close" class="text-white/50 hover:text-white text-lg leading-none">&times;</button>
+    </div>
+
+    <div id="chat-messages" class="chat-messages">
+      <div class="chat-bubble bot">
+        <span>👋 Hi! I'm your HR Web Solutions assistant. How can I help you today?</span>
+      </div>
+    </div>
+
+    <div class="chat-quick-replies" id="quick-replies">
+      <button class="qr-btn" data-reply="I'd like to book a free strategy call">📅 Book a Call</button>
+      <button class="qr-btn" data-reply="What services do you offer?">🛠 Services</button>
+      <button class="qr-btn" data-reply="What are your pricing options?">💰 Pricing</button>
+    </div>
+
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Type a message..." class="chat-input" />
+      <button id="chat-send" class="chat-send-btn">→</button>
+    </div>
+  </div>
+
+  <!-- Toggle Button -->
+  <button id="chat-toggle" class="chat-toggle-btn" aria-label="Open chat">
+    <span id="chat-icon-open" class="transition-all duration-300">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+    </span>
+    <span id="chat-icon-close" class="hidden transition-all duration-300 text-xl font-700">✕</span>
+    <!-- Notification Dot -->
+    <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-red-500 rounded-full border-2 border-navy text-white text-[8px] flex items-center justify-center font-700" id="chat-notif">1</span>
+  </button>
+</div>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>
