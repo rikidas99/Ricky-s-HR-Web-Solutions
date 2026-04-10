@@ -514,7 +514,7 @@ select.form-input option {
 
 
 
-/* Logo Text Color  **************8*/
+/* Logo Text Color  ***************/
 .logo-text-gradient {
   /* 1. Define the gradient colors */
   background: linear-gradient(135deg, #00FFFF, #80DAEB, #98FB98, #B2FFB2);
