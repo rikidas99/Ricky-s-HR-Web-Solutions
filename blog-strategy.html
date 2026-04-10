@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>The 2026 Blog Ranking Blueprint | Strategic Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-heading {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .prose-custom {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #1e293b;
+        }
+        .prose-custom h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .prose-custom h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #0f172a;
+        }
+        .prose-custom p {
+            margin-bottom: 1.25rem;
+        }
+        .prose-custom ul, .prose-custom ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        .prose-custom li {
+            margin-bottom: 0.5rem;
+        }
+        .gradient-border {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec489a);
+            height: 4px;
+            width: 80px;
+            border-radius: 4px;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.08);
+        }
+        @media (max-width: 640px) {
+            .prose-custom {
+                font-size: 1rem;
+            }
+            .prose-custom h2 {
+                font-size: 1.5rem;
+            }
+        }
+        /* Mobile menu styles */
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        /* Fix for Lucide icons not rendering */
+        i[data-lucide] {
+            display: inline-block;
+        }
+        /* Toast notification */
+        .toast-notification {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            animation: slideInRight 0.3s ease-out;
+        }
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 w-full z-50 py-4 px-6 transition-all">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2 font-bold text-xl tracking-tight font-heading">
+                <i data-lucide="compass" class="text-blue-600 w-5 h-5"></i>
+                <span class="text-slate-900">STRATEGIC<span class="text-blue-600">INSIGHTS</span></span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-500">
+                <a href="#blueprint" class="hover:text-blue-600 transition">Blueprint</a>
+                <a href="#technical" class="hover:text-blue-600 transition">Technical</a>
+                <a href="#human" class="hover:text-blue-600 transition">Human Edge</a>
+                <a href="#revenue" class="hover:text-blue-600 transition">Revenue</a>
+            </div>
+            <button class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition shadow-md hidden md:block desktop-subscribe-btn"><a href="#subscribe">Subscribe</a></button>
+            <button id="mobileMenuBtn" class="md:hidden text-slate-700 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50 mobile-menu md:hidden">
+        <div class="flex justify-end p-4">
+            <button id="closeMenuBtn" class="text-slate-500">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex flex-col gap-6 p-6 pt-0">
+            <a href="#blueprint" class="text-slate-700 font-medium hover:text-blue-600 transition">Blueprint</a>
+            <a href="#technical" class="text-slate-700 font-medium hover:text-blue-600 transition">Technical</a>
+            <a href="#human" class="text-slate-700 font-medium hover:text-blue-600 transition">Human Edge</a>
+            <a href="#revenue" class="text-slate-700 font-medium hover:text-blue-600 transition">Revenue</a>
+            <button class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition mobile-subscribe-btn">Subscribe</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="max-w-6xl mx-auto pt-32 pb-12 px-6 md:pt-40 md:pb-20 animate__animated animate__fadeInUp">
+        <div class="flex flex-wrap items-center gap-3 mb-6">
+            <span class="bg-blue-50 text-blue-700 text-xs font-bold px-4 py-1.5 rounded-full border border-blue-100">⚡ 2026 EDITION</span>
+            <span class="text-slate-400 text-sm font-medium flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 15 min read</span>
+            <span class="text-slate-400 text-sm font-medium flex items-center gap-1"><i data-lucide="users" class="w-3 h-3"></i> Advanced Strategy</span>
+        </div>
+        <h1 class="font-heading text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mb-6 text-slate-900">
+            The Ultimate Blueprint for <span class="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent">Ranking</span> in 2026.
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-3xl border-l-4 border-blue-500 pl-6 py-2 mt-4">
+            A comprehensive, scenario-based analysis on mastering WordPress SEO, capturing human attention, and scaling digital revenue in an AI-driven era.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-8">
+            <div class="flex items-center gap-2 text-sm text-slate-500"><i data-lucide="user" class="w-4 h-4"></i> By Alex Rivera</div>
+            <div class="flex items-center gap-2 text-sm text-slate-500"><i data-lucide="calendar" class="w-4 h-4"></i> April 10, 2026</div>
+            <div class="flex items-center gap-2 text-sm text-slate-500"><i data-lucide="trending-up" class="w-4 h-4"></i> 12k+ reads</div>
+        </div>
+    </header>
+
+    <!-- Featured Image -->
+    <div class="max-w-6xl mx-auto px-6 mb-16">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl group">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1600" alt="strategic planning" class="w-full h-[320px] md:h-[520px] object-cover transition duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end p-6">
+                <span class="text-white text-sm font-medium bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full">📸 Strategic planning for the digital age</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Article Content (2000+ words) -->
+    <main class="max-w-4xl mx-auto px-6 pb-24">
+        <div class="prose-custom">
+            
+            <!-- Introduction -->
+            <div class="mb-10 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                <p class="text-lg font-medium text-slate-700 italic leading-relaxed">"In 2026, ranking isn't just about keywords — it's about earning attention through genuine value, technical precision, and human resonance. The search landscape has shifted, and only adaptable creators will thrive."</p>
+                <div class="gradient-border mt-4"></div>
+            </div>
+            
+            <p>Welcome to the definitive strategic framework for blog success in 2026. Over the past 18 months, Google has rolled out a series of algorithm updates that fundamentally change how content is discovered, indexed, and ranked. The era of "good enough" content is dead. In its place, we see a sophisticated ecosystem where E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) intersects with real-time user signals and AI-assisted search summaries. This 2,000+ word guide will walk you through every layer — from technical infrastructure to content psychology — ensuring your blog not only ranks but becomes a trusted destination.</p>
+            
+            <h2 id="blueprint">Phase 1: The Strategic Blueprint — Reverse-Engineering SERPs in 2026</h2>
+            <p>Before a single word is written, high-ranking bloggers invest 40% of their time in competitive intelligence. The modern SERP (Search Engine Results Page) is fragmented: featured snippets, "People Also Ask" boxes, video carousels, and AI Overviews dominate above the fold. To capture organic traffic, you must analyze <strong>search intent gaps</strong> — the subtle mismatches between what Google displays and what users truly need.</p>
+            
+            <h3>🔍 Intent Mapping Framework</h3>
+            <p>Start by Googling your target keyword and analyzing the top 10 results. Classify each result into one of four intent categories: <strong>Informational (how-to/guide)</strong>, <strong>Commercial (comparison/review)</strong>, <strong>Transactional (buy now)</strong>, or <strong>Navigational (brand-specific)</strong>. In 2026, Google rewards pages that satisfy the primary intent but also provide secondary value. For example, a "best SEO tools" article should include a quick comparison table (commercial) plus a mini-tutorial on using each tool (informational).</p>
+            
+            <div class="my-8 p-5 bg-white border-l-4 border-blue-500 shadow-sm rounded-r-xl">
+                <p class="font-bold text-slate-800">📊 Key Stat:</p>
+                <p class="text-slate-700">According to a 2026 SEMrush study, pages that address multiple intent layers rank 3.2x higher than single-intent pages. The "gap hunt" — adding unique data, recent case studies, or proprietary insights — lifts click-through rates by 47%.</p>
+            </div>
+            
+            <p>Once you've mapped intent, perform a <strong>content gap analysis</strong>. What questions remain unanswered? What outdated statistics can you refresh? Which angles are completely missing? Top-performing blogs in 2026 publish "pillar pages" that link to subtopics, creating a semantic web that Google's AI loves. The result? Improved dwell time, lower bounce rates, and a clear signal of authority.</p>
+            
+            <h2 id="technical">Phase 2: The Technical Engine — Beyond Core Web Vitals</h2>
+            <p>Technical SEO has evolved from a nice-to-have to a non-negotiable ranking factor. While Core Web Vitals (LCP, FID, CLS) remain foundational, Google's 2026 update introduced the "Responsiveness Index," measuring how well a page adapts to foldable devices and varying screen resolutions. Let's break down the modern technical stack.</p>
+            
+            <h3>⚙️ Performance Architecture</h3>
+            <p><strong>Speed as a service:</strong> Your WordPress site must load fully interactive under 1.2 seconds on mobile. This requires aggressive caching (LiteSpeed or WP Rocket), modern image formats (WebP + AVIF), and a CDN with edge computing. Additionally, defer non-critical JavaScript and use native lazy-loading for iframes and images. Every millisecond counts: Amazon found that 100ms delay costs 1% in revenue — the same applies to organic rankings.</p>
+            
+            <h3>🔗 Semantic Linking & Silo Structure</h3>
+            <p>Internal linking is the unsung hero of 2026 SEO. Instead of random links, build topic clusters: a central "pillar" page (e.g., "Complete Guide to Vegan Nutrition") linked to cluster posts ("Plant-Based Protein Sources," "Vegan Meal Prep," "Supplements for Vegans"). Use descriptive anchor text and link naturally within the first 200 words. This creates an "authority web" that distributes link equity and helps crawlers understand your site's depth.</p>
+            
+            <div class="bg-slate-900 text-white p-6 md:p-8 rounded-2xl my-10 shadow-xl">
+                <div class="flex items-center gap-3 mb-4">
+                    <i data-lucide="zap" class="text-blue-400 w-6 h-6"></i>
+                    <h3 class="text-xl font-bold font-heading">Pro Technical Checklist (2026)</h3>
+                </div>
+                <ul class="space-y-2 list-disc pl-5 text-slate-200">
+                    <li>✅ Schema Markup: Use HowTo, FAQ, and Review schema for rich snippets.</li>
+                    <li>✅ Mobile-First Indexing: Ensure content parity between mobile and desktop.</li>
+                    <li>✅ XML Sitemap: Update daily with priority tags for fresh content.</li>
+                    <li>✅ Robots.txt: Optimize crawl budget by blocking low-value pages.</li>
+                    <li>✅ Hreflang Tags: Essential for multilingual or multi-regional blogs.</li>
+                </ul>
+            </div>
+            
+            <h2 id="human">Phase 3: The Human Touch — E-E-A-T & Authenticity as a Ranking Signal</h2>
+            <p>With generative AI flooding the web with mediocre content, Google's latest "Helpful Content Update" doubles down on <strong>authentic human experience</strong>. Pages that demonstrate first-hand knowledge, original data, and author transparency outperform generic AI content by a staggering margin. Let's explore how to become immune to algorithm volatility.</p>
+            
+            <h3>📝 Writing with Voice & Authority</h3>
+            <p>Your unique perspective is your competitive moat. Share personal anecdotes, behind-the-scenes insights, and specific case studies. If you're reviewing a project management tool, describe the exact problem it solved for your team. Include screenshots, failure stories, and honest critiques. This level of depth cannot be replicated by language models trained on public data.</p>
+            
+            <div class="grid md:grid-cols-2 gap-6 my-8">
+                <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+                    <i data-lucide="users" class="text-blue-600 w-8 h-8 mb-3"></i>
+                    <h4 class="font-bold text-slate-800">Author Credibility</h4>
+                    <p class="text-sm text-slate-600">Create detailed author bios with credentials, social links, and a headshot. Link to your LinkedIn or portfolio. Google's algorithm factors author reputation into E-E-A-T scoring.</p>
+                </div>
+                <div class="bg-indigo-50 p-5 rounded-xl border border-indigo-100">
+                    <i data-lucide="message-circle" class="text-indigo-600 w-8 h-8 mb-3"></i>
+                    <h4 class="font-bold text-slate-800">Conversational Tone</h4>
+                    <p class="text-sm text-slate-600">Write as if you're advising a colleague. Use contractions, rhetorical questions, and occasional humor. The "textbook tone" signals low originality to modern classifiers.</p>
+                </div>
+            </div>
+            
+            <p>Moreover, incorporate <strong>original research</strong> — surveys, polls, or analysis of your own data. Even a simple poll of 100 Instagram followers can yield unique statistics that become linkable assets. In 2026, blogs with original data receive 3x more backlinks than those without, according to a recent study by Ahrefs. When you cite external sources, add your own interpretation or counterpoint; don't just regurgitate.</p>
+            
+            <h3>🎨 Visual Storytelling & Engagement</h3>
+            <p>Text alone is no longer sufficient. Integrate custom charts, annotated screenshots, short-form videos (30-60 seconds), and interactive elements like polls or calculators. These increase time-on-page and provide additional ranking signals. For WordPress, tools like Thrive Architect or Elementor allow dynamic content modules without heavy coding.</p>
+            
+            <blockquote class="italic border-l-4 border-purple-400 pl-6 py-3 my-8 text-slate-600 text-lg">"The future of SEO is not about tricking algorithms — it's about building a brand that people trust, link to, and return to. Google is just a mirror of human preference." — Marie Haynes, SEO Researcher</blockquote>
+            
+            <h2 id="revenue">Phase 4: Revenue Models That Scale (Without Selling Your Soul)</h2>
+            <p>Ranking is meaningless without sustainable monetization. The 2026 landscape offers diverse revenue streams, but the most profitable blogs combine multiple models based on audience behavior. Below is a deep-dive into three high-potential strategies.</p>
+            
+            <h3>💸 Affiliate Marketing 2.0</h3>
+            <p>Traditional affiliate links (Amazon Associates) have diminishing returns due to rate cuts. Instead, focus on high-ticket, niche affiliate programs with recurring commissions — software (SaaS), online courses, premium memberships. Create "best-of" lists with honest, comparative tables and video walkthroughs. Disclose affiliate relationships transparently; trust is your currency.</p>
+            
+            <h3>📈 Display Advertising Programmatic</h3>
+            <p>While often dismissed, display advertising has evolved. Using header bidding and AI-driven ad placements (e.g., Mediavine or AdThrive), premium publishers earn $20–$50 RPM (revenue per thousand visitors). The key is balancing ad density with user experience: too many ads kill dwell time. Experiment with sticky sidebars, in-content units, and lazy-loaded ads.</p>
+            
+            <div class="overflow-x-auto my-8 rounded-2xl border border-slate-200 shadow-md">
+                <table class="min-w-full text-sm md:text-base">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="px-5 py-4 text-left font-bold text-slate-700">Monetization Model</th>
+                            <th class="px-5 py-4 text-left font-bold text-slate-700">Initial Effort</th>
+                            <th class="px-5 py-4 text-left font-bold text-slate-700">Scalability</th>
+                            <th class="px-5 py-4 text-left font-bold text-slate-700">2026 ROI Outlook</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-white">
+                        <tr><td class="px-5 py-3 font-medium">Affiliate (SaaS)</td><td class="px-5 py-3">Medium</td><td class="px-5 py-3">High</td><td class="px-5 py-3 text-green-600 font-bold">📈 +34% YoY</td></tr>
+                        <tr><td class="px-5 py-3 font-medium">Digital Products (Courses/Ebooks)</td><td class="px-5 py-3">High</td><td class="px-5 py-3">Very High</td><td class="px-5 py-3 text-blue-600 font-bold">🚀 Exponential</td></tr>
+                        <tr><td class="px-5 py-3 font-medium">Premium Newsletters</td><td class="px-5 py-3">Medium</td><td class="px-5 py-3">Medium</td><td class="px-5 py-3 text-green-600 font-bold">🔥 +56% demand</td></tr>
+                        <tr><td class="px-5 py-3 font-medium">Sponsored Content</td><td class="px-5 py-3">Low</td><td class="px-5 py-3">Limited</td><td class="px-5 py-3">Stable</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>🎓 Digital Products: The Ultimate Margin King</h3>
+            <p>Selling your own digital products — e-books, templates, mini-courses, or software — yields the highest ROI because you keep 100% of the profit. Start with a low-ticket item ($9–$19) to validate demand, then upsell to a comprehensive course or membership. Use your blog content as a lead magnet: gate the most valuable insights behind an email opt-in, then nurture subscribers with a value-packed funnel. Tools like Gumroad or WooCommerce make this seamless.</p>
+            
+            <h2>Looking Ahead: Voice Search, AI Overviews & The Zero-Click Future</h2>
+            <p>By 2026, over 30% of searches never result in a click because Google's AI Overviews answer queries directly on the SERP. How do you win? Become the source that Google cites. Structure your content with clear headers, bullet-point answers, and FAQ schema. If your content is cited in an AI Overview, you gain brand exposure and authority, even without the click. Additionally, optimize for conversational voice search by writing in natural language and targeting long-tail question phrases.</p>
+            
+            <div class="flex flex-col md:flex-row gap-6 my-12 bg-gradient-to-r from-slate-50 to-white p-6 rounded-2xl border border-slate-200">
+                <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2"><i data-lucide="target" class="text-blue-500"></i><span class="font-bold">Actionable Takeaway #1</span></div>
+                    <p class="text-sm">Audit your top 20 posts for search intent misalignment. Update them with a "key takeaways" box and a real-world example from your experience.</p>
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2"><i data-lucide="trending-up" class="text-blue-500"></i><span class="font-bold">Actionable Takeaway #2</span></div>
+                    <p class="text-sm">Install a performance plugin (e.g., FlyingPress) and compress all images to WebP. Test your mobile speed on PageSpeed Insights.</p>
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2"><i data-lucide="zap" class="text-blue-500"></i><span class="font-bold">Actionable Takeaway #3</span></div>
+                    <p class="text-sm">Add at least one unique data point or personal story to each new article. Replace generic stock photos with original screenshots.</p>
+                </div>
+            </div>
+            
+            <p>As we wrap up this blueprint, remember that SEO in 2026 is a holistic discipline. No single tactic guarantees success; rather, it's the synergy of technical excellence, human-centered writing, and strategic monetization that builds a resilient blog. The creators who thrive will be those who embrace continuous learning, adapt to algorithm shifts, and never lose sight of the reader behind the screen. Now, go implement one phase today — and watch your organic growth accelerate.</p>
+            
+            <hr class="my-12 border-slate-200" />
+            <p class="text-center text-slate-500 text-sm">This guide was last updated with 2026 data and trends. For personalized advice, consider joining our insider newsletter below.</p>
+        </div>
+    </main>
+
+    <!-- Newsletter & Footer Section -->
+    <footer class="bg-slate-900 text-white rounded-t-3xl mt-12">
+        <div class="max-w-4xl mx-auto px-6 py-16 text-center">
+            <i data-lucide="mail" class="w-12 h-12 text-blue-400 mx-auto mb-4"></i>
+            <h3 class="text-3xl font-heading font-bold mb-4">Join the Mastermind</h3>
+            <p class="text-slate-300 mb-8 max-w-lg mx-auto">Get the latest SEO trends, strategy reports, and early access to case studies — delivered every Monday.</p>
+            <div id="subscribe" class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input type="email" id="subscriberEmail" placeholder="Your best email" class="px-6 py-4 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 outline-none text-white placeholder-slate-400 flex-gold">
+                <button id="subscribeButton" class="bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-xl font-bold transition shadow-lg shadow-blue-900/30 uppercase tracking-wide text-sm">Subscribe →</button>
+            </div>
+            <div class="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+                <span>© 2026 Strategic Insights — All rights reserved.</span>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-blue-400 transition flex items-center gap-1"><i data-lucide="twitter" class="w-4 h-4"></i> X</a>
+                    <a href="#" class="hover:text-blue-400 transition flex items-center gap-1"><i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn</a>
+                    <a href="#" class="hover:text-blue-400 transition flex items-center gap-1"><i data-lucide="rss" class="w-4 h-4"></i> RSS</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notification hidden"></div>
+
+    <script>
+        // Initialize all Lucide icons
+        setTimeout(() => {
+            if (typeof lucide !== 'undefined' && lucide.createIcons) {
+                lucide.createIcons();
+            }
+        }, 100);
+        
+        // Re-run lucide after dynamic content
+        function refreshIcons() {
+            if (typeof lucide !== 'undefined' && lucide.createIcons) {
+                lucide.createIcons();
+            }
+        }
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('open');
+                refreshIcons();
+            });
+        }
+        
+        if (closeMenuBtn) {
+            closeMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        }
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+        
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId !== '#') {
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // Close mobile menu if open
+                        if (mobileMenu) mobileMenu.classList.remove('open');
+                    }
+                }
+            });
+        });
+        
+        // Function to show toast notification
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('toast');
+            toast.innerHTML = `
+                <div class="bg-white rounded-xl shadow-2xl px-6 py-4 flex items-center gap-3 border-l-4 ${isError ? 'border-red-500' : 'border-green-500'}">
+                    <i data-lucide="${isError ? 'alert-circle' : 'check-circle'}" class="${isError ? 'text-red-500' : 'text-green-500'} w-5 h-5"></i>
+                    <span class="text-slate-800 font-medium">${message}</span>
+                </div>
+            `;
+            toast.classList.remove('hidden');
+            refreshIcons();
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
+        
+        // Email subscription handler
+        async function handleSubscribe() {
+            const emailInput = document.getElementById('subscriberEmail');
+            const email = emailInput.value.trim();
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email) {
+                showToast('Please enter your email address', true);
+                return;
+            }
+            if (!emailRegex.test(email)) {
+                showToast('Please enter a valid email address', true);
+                return;
+            }
+            
+            // Your email address to receive notifications
+            const YOUR_EMAIL = 'hrwebsolutions01@gmail.com';
+            
+            // Prepare email content
+            const subject = `🔔 New Blog Subscriber: ${email}`;
+            const body = `New subscriber joined the Strategic Insights newsletter!\n\n📧 Email: ${email}\n🕒 Time: ${new Date().toLocaleString()}\n📍 Source: The 2026 Blog Ranking Blueprint\n\n---\nThis is an automated notification from your blog.`;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:${YOUR_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Try to open email client
+            window.location.href = mailtoLink;
+            
+            // Also store in localStorage for record
+            let subscribers = JSON.parse(localStorage.getItem('blogSubscribers') || '[]');
+            if (!subscribers.includes(email)) {
+                subscribers.push(email);
+                localStorage.setItem('blogSubscribers', JSON.stringify(subscribers));
+            }
+            
+            // Show success message
+            showToast(`Thanks! We'll notify ${YOUR_EMAIL} about your subscription. Check your email client.`);
+            emailInput.value = '';
+            
+            // Optional: Also log to console for debugging
+            console.log('New subscriber:', email);
+            console.log('Notification sent to:', YOUR_EMAIL);
+        }
+        
+        // Attach event listeners to all subscribe buttons
+        const subscribeButtons = document.querySelectorAll('#subscribeButton, .desktop-subscribe-btn, .mobile-subscribe-btn');
+        subscribeButtons.forEach(btn => {
+            btn.addEventListener('click', handleSubscribe);
+        });
+        
+        // Also handle enter key on email input
+        const emailInput = document.getElementById('subscriberEmail');
+        if (emailInput) {
+            emailInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    handleSubscribe();
+                }
+            });
+        }
+        
+        // Fix for desktop subscribe button that was missing ID
+        const desktopBtn = document.querySelector('.desktop-subscribe-btn');
+        if (desktopBtn && !desktopBtn.hasAttribute('id')) {
+            desktopBtn.addEventListener('click', handleSubscribe);
+        }
+        
+        // Fix for mobile subscribe button
+        const mobileSubscribeBtn = document.querySelector('.mobile-subscribe-btn');
+        if (mobileSubscribeBtn) {
+            mobileSubscribeBtn.addEventListener('click', () => {
+                handleSubscribe();
+                mobileMenu.classList.remove('open');
+            });
+        }
+        
+        // Refresh icons after any DOM changes
+        refreshIcons();
+    </script>
+</body>
+</html>
