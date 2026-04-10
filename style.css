@@ -25,6 +25,8 @@ body {
   overflow-x: hidden;
 }
 
+
+
 /* ---- TYPOGRAPHY ---- */
 .font-display { font-family: 'Syne', sans-serif; }
 
@@ -508,4 +510,24 @@ select.form-input option {
   .chat-window { width: calc(100vw - 24px); right: 0; }
   .portfolio-overlay { transform: translateY(0); }
   .portfolio-overlay .tag { font-size: 0.65rem; }
+}
+
+
+
+/* Logo Text Color  **************8*/
+.logo-text-gradient {
+  /* 1. Define the gradient colors */
+  background: linear-gradient(135deg, #00FFFF, #80DAEB, #98FB98, #B2FFB2);
+  font-weight: 400;
+  
+  /* 2. Clip the background to the text shape */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* 3. Make the actual text transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  
+  /* Optional: Ensure it looks good on older browsers */
+  display: inline-block;
 }
